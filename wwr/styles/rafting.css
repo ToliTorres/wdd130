@@ -1,8 +1,8 @@
 :root {
   --primary-color: #2fc97c; /* green */
-  --secondary-color: #f4a261; /* warm sand */
+  --secondary-color: #f1b92a;
   --accent1-color: #18295c; /* dark blue */
-  --accent2-color: #e9c46a; /* light golden yellow */
+  --accent2-color: rgba(64, 248, 110, 0.603);
   --h1-color: #fff; /* white text */
   --heading-font: "Lucida Console", "Courier New", monospace;
   --body-font: Arial, Helvetica, sans-serif;
@@ -36,6 +36,69 @@ h1, h2 {
 nav, p, section, article {
     margin: 16px;
     padding: 5px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+}
+
+.navigation {
+    display: flex;
+    justify-content:center;
+    list-style: none;
+    text-decoration: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.7rem 1.7rem;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid var(--accent1-color);
+    text-align: center;
+}
+
+.navigation a:hover {
+  background-color: var(--accent2-color);    /* hover efect */
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.history {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.history p {
+    flex: 1;
+}
+
+.adventure {
+    
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+}
+
+.adventure img {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--accent1-color);
 }
 
 .socialmedia a {
@@ -81,13 +144,16 @@ article {
 }
 
 footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4rem;
     border-top: 1px solid #000;
-    text-align: left;
+    /* text-align: left; */
     font-size: small;
     margin: 0 auto;
     padding: 0;
 }
-
 
 
 
